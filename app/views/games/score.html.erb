@@ -1,0 +1,10 @@
+<h1>Results</h1>
+<% if @is_include == false %>
+<%= "Sorry but #{params[:answer].upcase} is not include in #{params[:letters]}" %>
+<% elsif @is_english == false %>
+<%= "Sorry but #{params[:answer].upcase} does not seem to be a valid English word..." %>
+<% else %>
+<%= "Congratulations! #{params[:answer].upcase} is a valid English word!" %>
+<% end %>
+<br>
+<%= link_to "Play again", new_path %>
